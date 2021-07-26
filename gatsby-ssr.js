@@ -24,26 +24,26 @@ var onRenderBody = function onRenderBody(_ref, _ref2) {
   } // Lighthouse recommends pre-connecting to googletagmanager
 
 
-  setHeadComponents([/*#__PURE__*/_react.default.createElement("link", {
-    rel: "preconnect dns-prefetch",
-    key: "preconnect-googletagmanager",
-    href: "https://www.googletagmanager.com"
-  }), /*#__PURE__*/_react.default.createElement("link", {
-    rel: "preconnect dns-prefetch",
-    key: "preconnect-google-analytics",
-    href: "https://www.google-analytics.com"
-  })]);
-  var anonymize = typeof googleAnalytics.anonymize !== "undefined" && googleAnalytics.anonymize === true;
-  var setComponents = googleAnalytics.head ? setHeadComponents : setPostBodyComponents;
-  setComponents([/*#__PURE__*/_react.default.createElement("script", {
-    async: true,
-    src: "https://www.googletagmanager.com/gtag/js?id=" + googleAnalytics.trackingId
-  }), /*#__PURE__*/_react.default.createElement("script", {
-    key: "gatsby-plugin-gdpr-tracking",
-    dangerouslySetInnerHTML: {
-      __html: "\n        " + (anonymize === true ? "function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='" + googleAnalytics.trackingId + "',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);" : "") + "\n         window.dataLayer = window.dataLayer || [];\n         function gtag(){dataLayer.push(arguments);}\n        "
-    }
-  })]);
+  // setHeadComponents([/*#__PURE__*/_react.default.createElement("link", {
+  //   rel: "preconnect dns-prefetch",
+  //   key: "preconnect-googletagmanager",
+  //   href: "https://www.googletagmanager.com"
+  // }), /*#__PURE__*/_react.default.createElement("link", {
+  //   rel: "preconnect dns-prefetch",
+  //   key: "preconnect-google-analytics",
+  //   href: "https://www.google-analytics.com"
+  // })]);
+  // var anonymize = typeof googleAnalytics.anonymize !== "undefined" && googleAnalytics.anonymize === true;
+  // var setComponents = googleAnalytics.head ? setHeadComponents : setPostBodyComponents;
+  // setComponents([/*#__PURE__*/_react.default.createElement("script", {
+  //   async: true,
+  //   src: "https://www.googletagmanager.com/gtag/js?id=" + googleAnalytics.trackingId
+  // }), /*#__PURE__*/_react.default.createElement("script", {
+  //   key: "gatsby-plugin-gdpr-tracking",
+  //   dangerouslySetInnerHTML: {
+  //     __html: "\n        " + (anonymize === true ? "function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC;path=/',window[disableStr]=!0}var gaProperty='" + googleAnalytics.trackingId + "',disableStr='ga-disable-'+gaProperty;document.cookie.indexOf(disableStr+'=true')>-1&&(window[disableStr]=!0);" : "") + "\n         window.dataLayer = window.dataLayer || [];\n         function gtag(){dataLayer.push(arguments);}\n        "
+  //   }
+  // })]);
 
   if (hotjar && hotjar.trackingId) {
     setHeadComponents([/*#__PURE__*/_react.default.createElement("script", {
